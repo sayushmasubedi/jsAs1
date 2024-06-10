@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #f9f8f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 120vh;
+}
+
+.see-n-say {
+    background-color: #fefefe;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+    height: 90%;
+    max-height: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+.images {
+    grid-column: 1 / span 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.images img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.images img:hover {
+    transform: scale(1.1);
+}
+
+.story {
+    grid-row: 2;
+    grid-column: 1 / span 2;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.story p {
+    font-size: 24px;
+    color: #333;
+}
+
+.selected-stories {
+    grid-row: 3;
+    grid-column: 1 / span 2;
+    text-align: center;
+}
+
+.selected-stories h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.selected-stories ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.selected-stories ul li {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+button {
+    background-color: #f47c7c;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #f25b5b;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+button:disabled:hover {
+    background-color: #ccc;
+}
+
